@@ -8,5 +8,5 @@ input2="$(curl https://raw.githubusercontent.com/ahmadsholik/linkYT/main/mail.tx
 while read -u 3 -r line1 && read -u 4 -r line2; do
   # process the lines
   # note that the loop will end when we reach EOF on either of the files, because of the `&&`
-start chromium-browser "$line1" --profile-email="$line2" &
+start chromium-browser "$line1" 
 done 3< "$input1"  4< "$input2"
